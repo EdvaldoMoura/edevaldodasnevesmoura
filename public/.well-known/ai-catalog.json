@@ -1,0 +1,24 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Edevaldo das Neves Moura",
+    "identifier": "did:web:edevaldodasnevesmoura.com.br",
+    "documentationUrl": "https://edevaldodasnevesmoura.com.br/sobre"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:edevaldodasnevesmoura.com.br:profile:curriculo",
+      "displayName": "Currículo Oficial - Edevaldo das Neves Moura",
+      "type": "application/agent-skills+md",
+      "description": "Portfólio e currículo oficial de Edevaldo das Neves Moura, Analista de Sistemas, Desenvolvedor Full Stack, Especialista Cloud, DBA e Segurança da Informação.",
+      "url": "https://edevaldodasnevesmoura.com.br/llms.txt",
+      "capabilities": [
+        "Análise de Sistemas",
+        "Desenvolvimento Full Stack",
+        "Infraestrutura e Cloud Computing",
+        "Administração de Banco de Dados (DBA)",
+        "Segurança da Informação e DPO"
+      ]
+    }
+  ]
+}
