@@ -1,33 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://sitemaps.org">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://edevaldodasnevesmoura.com.br</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://edevaldodasnevesmoura.com.br/</loc>
   </url>
   <url>
-    <loc>https://edevaldodasnevesmoura.com.brsobre</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://edevaldodasnevesmoura.com.br/sobre</loc>
   </url>
   <url>
-    <loc>https://edevaldodasnevesmoura.com.brexperiencia</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://edevaldodasnevesmoura.com.br/experiencia</loc>
   </url>
   <url>
-    <loc>https://edevaldodasnevesmoura.com.brformacao</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://edevaldodasnevesmoura.com.br/formacao</loc>
   </url>
   <url>
-    <loc>https://edevaldodasnevesmoura.com.brcontato</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://edevaldodasnevesmoura.com.br/contato</loc>
   </url>
 </urlset>
