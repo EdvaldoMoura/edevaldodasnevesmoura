@@ -1,14 +1,82 @@
-<header style="border-bottom: 1px solid #1f2937; background: #0b0f19; position: sticky; top: 0; z-index: 100;">
-  <nav class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; flex-wrap: wrap; gap: 1rem;" aria-label="Navegação Principal">
-    <a routerLink="/" style="color: #f3f4f6; text-decoration: none; font-weight: 700; font-size: 1.2rem;">
-      &lt;<span style="color: #38bdf8;">EdevaldoMoura</span> /&gt;
+<header class="navbar-header">
+  <nav class="container navbar-container" aria-label="Navegação Principal">
+    <a routerLink="/" class="navbar-logo" (click)="fecharMenu()">
+      &lt;<span>EdevaldoMoura</span> /&gt;
     </a>
-    <ul style="list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap;">
-      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" style="color: #9ca3af; text-decoration: none;">Início</a></li>
-      <li><a routerLink="/sobre" routerLinkActive="active" style="color: #9ca3af; text-decoration: none;">Sobre</a></li>
-      <li><a routerLink="/experiencia" routerLinkActive="active" style="color: #9ca3af; text-decoration: none;">Experiência</a></li>
-      <li><a routerLink="/formacao" routerLinkActive="active" style="color: #9ca3af; text-decoration: none;">Formação & Skills</a></li>
-      <li><a routerLink="/contato" routerLinkActive="active" style="color: #9ca3af; text-decoration: none;">Contato</a></li>
+
+    <!-- Botão Hambúrguer (visível apenas no celular) -->
+    <button
+      type="button"
+      class="menu-toggle"
+      (click)="alternarMenu()"
+      [attr.aria-expanded]="menuAberto()"
+      aria-label="Abrir ou fechar menu de navegação"
+    >
+      @if (menuAberto()) {
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      } @else {
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      }
+    </button>
+
+    <!-- Lista de Links com Ícones SVG -->
+    <ul class="navbar-links" [class.aberto]="menuAberto()">
+      <li>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="fecharMenu()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Início</span>
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/sobre" routerLinkActive="active" (click)="fecharMenu()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>Sobre</span>
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/experiencia" routerLinkActive="active" (click)="fecharMenu()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          <span>Experiência</span>
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/formacao" routerLinkActive="active" (click)="fecharMenu()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+          <span>Formação &amp; Skills</span>
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/contato" routerLinkActive="active" (click)="fecharMenu()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>Contato</span>
+        </a>
+      </li>
     </ul>
   </nav>
 </header>
