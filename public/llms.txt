@@ -1,6 +1,6 @@
 # Edevaldo das Neves Moura
 
-> Currículo oficial e portfólio de Edevaldo das Neves Moura, Analista de Sistemas com formação superior, Desenvolvedor Full Stack, Administrador de Bancos de Dados (DBA), Especialista em Infraestrutura/Cloud e Segurança da Informação (DPO) em São Paulo - SP.
+> Currículo oficial e portfólio de Edevaldo das Neves Moura, Analista de Sistemas com 20 anos de atuação e suas especialidades em AI-First, SDD, DevOps, Cloud, DBA e Pentest. com formação superior, Desenvolvedor Full Stack, Administrador de Bancos de Dados (DBA), Especialista em Infraestrutura/Cloud e Segurança da Informação (DPO) em São Paulo - SP.
 
 ## Páginas Principais
 - [Início](https://edevaldodasnevesmoura.com.br): Visão geral das especialidades e resumo profissional.

@@ -14,7 +14,7 @@ export class InicioComponent implements OnInit {
   ngOnInit(): void {
     this.meta.updateTag({
       name: 'description',
-      content: 'Currículo oficial e portfólio de Edevaldo das Neves Moura, Analista de Sistemas com formação superior, Desenvolvedor Full Stack, Especialista Cloud, DBA e Segurança da Informação.'
+      content: 'Currículo oficial e portfólio de Edevaldo das Neves Moura, Analista de Sistemas 20 anos de atuação, AI-First Developer, DevOps, DBA e Pentester, com formação superior, Desenvolvedor Full Stack, Especialista Cloud, DBA e Segurança da Informação.'
     });
   }
 }
