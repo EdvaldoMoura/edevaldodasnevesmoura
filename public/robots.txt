@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://edevaldodasnevesmoura.com.br
+Sitemap: https://edevaldodasnevesmoura.com.br/sitemap.xml
 
