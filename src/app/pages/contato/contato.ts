@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-contato',
@@ -7,12 +7,12 @@ import { Meta } from '@angular/platform-browser';
   templateUrl: './contato.html',
 })
 export class ContatoComponent implements OnInit {
-  private meta = inject(Meta);
+  private seoService = inject(SeoService);
 
   ngOnInit(): void {
-    this.meta.updateTag({
-      name: 'description',
-      content: 'Entre em contato com Edevaldo das Neves Moura em São Paulo - SP. Disponível para oportunidades e consultoria como Analista de Sistemas, Desenvolvedor Full Stack, DBA e Cloud.'
-    });
+    this.seoService.atualizarMetaTags(
+      'Canais oficiais de contato de Edevaldo das Neves Moura, Analista de Sistemas e Desenvolvedor Full Stack. Conecte-se via e-mail, LinkedIn ou GitHub.',
+      '/contato/'
+    );
   }
 }

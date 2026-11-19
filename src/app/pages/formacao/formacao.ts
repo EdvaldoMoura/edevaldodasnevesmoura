@@ -1,6 +1,6 @@
 import { Component, inject, OnInit, signal, HostListener, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Meta } from '@angular/platform-browser';
+import { SeoService } from '../../services/seo.service';
 
 export interface DiplomaItem {
   id: string;
@@ -26,7 +26,7 @@ export interface DiplomaItem {
   styleUrl: './formacao.css',
 })
 export class FormacaoComponent implements OnInit {
-  private meta = inject(Meta);
+  private seoService = inject(SeoService);
   private platformId = inject(PLATFORM_ID);
 
   readonly diplomaAds: DiplomaItem = {
@@ -50,10 +50,10 @@ export class FormacaoComponent implements OnInit {
   diplomaAtivo = signal<DiplomaItem | null>(null);
 
   ngOnInit(): void {
-    this.meta.updateTag({
-      name: 'description',
-      content: 'Formação acadêmica em Análise e Desenvolvimento de Sistemas pela Universidade Cruzeiro do Sul, cursos técnicos e competências em Engenharia de Software, DevOps e Metodologias Ágeis.'
-    });
+    this.seoService.atualizarMetaTags(
+      'Formação acadêmica em Análise e Desenvolvimento de Sistemas pela Universidade Cruzeiro do Sul, cursos técnicos e competências em Engenharia de Software, DevOps e Metodologias Ágeis.',
+      '/formacao/'
+    );
   }
 
   abrirModal(diploma: DiplomaItem): void {

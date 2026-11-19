@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-sobre',
@@ -7,12 +7,12 @@ import { Meta } from '@angular/platform-browser';
   templateUrl: './sobre.html',
 })
 export class SobreComponent implements OnInit {
-  private meta = inject(Meta);
+  private seoService = inject(SeoService);
 
   ngOnInit(): void {
-    this.meta.updateTag({
-      name: 'description',
-      content: 'Conheça o perfil técnico multidisciplinar de Edevaldo das Neves Moura: Desenvolvimento Web, Mobile e Desktop, Servidores Linux/Windows, Cloud AWS/Azure/GCP e Segurança da Informação.'
-    });
+    this.seoService.atualizarMetaTags(
+      'Conheça o perfil técnico multidisciplinar de Edevaldo das Neves Moura: Desenvolvimento Web, Mobile e Desktop, Servidores Linux/Windows, Cloud AWS/Azure/GCP e Segurança da Informação.',
+      '/sobre/'
+    );
   }
 }
